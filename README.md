@@ -6,12 +6,24 @@ be multiple solutions per challenge (fastest to finish, fewest lines, different 
 etc.).
 
 The entries are split by year, and all the code for day X is stored in the `day_X`
-directory. The input files given for my Github account are all placed in day directories
-as `input.txt` (note that users are given different inputs, so your input files may be
-different to the ones in this repo).
+directory. Each day's challenge has two parts, and each of these parts have their own
+solution file.
 
-Finally, each day's challenge is split out into two parts, and each of these parts have
-their own solution file.
+## Python specific notes
+
+### Input
+
+Some of the inputs are manually added, but for many of the Python solutions the
+[aocd](https://pypi.org/project/advent-of-code-data/) library is used to automatically
+read in the day's data for a Github account.
+
+### Requirements
+
+To install the `aocd` dependency, navigate to the base directory and run:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## How to run the code
 
