@@ -24,6 +24,16 @@ You can get a set of the values common in both by doing:
 
 `[do_thing(x) for x in x_list]` if `do_thing` doesn't need to return a value (e.g. is `x` is an object that is updated).
 
+## Add to dict
+
+`my_dict[x] = my_dict.get(x, 0) + y` can be used instead of:
+
+```
+if x not in my_dict:
+    my_dict[x] = 0
+my_dict[x] += y
+```
+
 ## Lists of pairs
 
 For an input of a list of nested pairs that you need to group and also convert to numbers:
