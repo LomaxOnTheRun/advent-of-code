@@ -16,9 +16,13 @@ You can get a set of the values common in both by doing:
 
 `x // 2` can be used instead of `int(x / 2)`.
 
-## Set of chars
+## Set of iterables
 
-`{*string}` can be used instead of `set(string)`.
+`{*iterable}` can be used instead of `set(iterable)` for an iterable (inc. a string).
+
+## List of iterable
+
+`[*iterable]` can be used instead of `list(iterable)` for an iterable (inc. a string).
 
 ## `for` loop
 
@@ -32,6 +36,32 @@ You can get a set of the values common in both by doing:
 if x not in my_dict:
     my_dict[x] = 0
 my_dict[x] += y
+```
+
+## if / else
+
+`(a, b)[x == y]` can be used instead of `b if x == y else a`.
+
+`"ab"[x == y]` can be used instead of `"b" if x == y else "a"`.
+
+## Transpose a list of list
+
+`[*zip(*original)]` can be used to transpose a list of lists.
+
+## for / if
+
+`for x in range(y * (z == True)):` or `for x in range(y) if z == True else ():` can be used instead of:
+
+```
+if z == True:
+    for x in range(y):
+```
+
+or:
+
+```
+for x in range(y):
+    if z == True:
 ```
 
 ## Lists of pairs
