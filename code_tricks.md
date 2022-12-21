@@ -48,6 +48,10 @@ my_dict[x] += y
 
 `[*zip(*original)]` can be used to transpose a list of lists.
 
+## List default
+
+`(my_list + [x])[0]` can be used to get the first item in a list, but default to `x` if the list is empty.
+
 ## for / if
 
 `for x in range(y * (z == True)):` or `for x in range(y) if z == True else ():` can be used instead of:
