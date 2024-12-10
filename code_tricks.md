@@ -101,3 +101,21 @@ pairs = zip(data[::2], data[1::2])
 ```
 
 This last option allows all of the inner operations (`int(...)` in this example) to only be written once for all values, instead of per value (e.g. `left` and `right`), and avoiding the messy second list comprehention example.
+
+## Walrus operator
+
+You can fit an always true statement in a compound `if` statement to assign a value:
+
+```py
+x, y = 0, 0
+if (xy := (x, y)) and x == 0:
+    # xy now exists as a variable
+```
+
+You can even use this new variable later in the same `if` statement:
+
+```py
+x, y = 0, 0
+if (xy := (x, y)) and xy == (0, 0):
+    ...
+```
